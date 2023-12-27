@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <form action="" name="myForm" onsubmit="return textValidation()">
+      <input type="text" id="text-input" name="fname" />
+      <button type="submit" id="check-btn" value="submit">Check</button>
+    </form>
+
+    <div id="result"></div>
+    <script>
+      function textValidation() {
+        const text = document.forms["myForm"]["fname"].value;
+        if (text == "") {
+          alert("Please input a value");
+          return false;
+        }
+      }
+    </script>
+  </body>
 </html>
