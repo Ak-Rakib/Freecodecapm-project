@@ -6,20 +6,13 @@
     <title>Document</title>
   </head>
   <body>
-    <form action="" name="myForm" onsubmit="return textValidation()">
+    <form action="" name="myForm" onsubmit="return textValidation(event)">
       <input type="text" id="text-input" name="fname" />
       <button type="submit" id="check-btn" value="submit">Check</button>
     </form>
 
     <div id="result"></div>
-    <script>
-      function textValidation() {
-        const text = document.forms["myForm"]["fname"].value;
-        if (text == "") {
-          alert("Please input a value");
-          return false;
-        }
-      }
+    <script src="Js/script.js">
     </script>
   </body>
 </html>
